@@ -1,0 +1,19 @@
+// HEADER
+.header {
+    background-color: $color-top;
+    display: flex;
+    justify-content: space-between;
+
+    .logo{
+        height: 5rem;
+        width: 5rem;
+        fill: white;;
+    }
+    li,
+    a,
+    button {
+        font-family: $header-font;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}
