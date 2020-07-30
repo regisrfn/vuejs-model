@@ -4,16 +4,16 @@
     <nav>
       <ul class="header__links">
         <li>
-          <a href="#">Services</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <a href="#">Information</a>
         </li>
         <li>
           <a href="#">About</a>
         </li>
       </ul>
-    <button>Contact</button>
+    <button>Services</button>
     </nav>
   </div>
 </template>
