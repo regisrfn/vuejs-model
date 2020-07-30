@@ -13,7 +13,7 @@
           <a href="#">About</a>
         </li>
       </ul>
-    <a href="#" class="cta"><button>Contact</button></a>
+    <button>Contact</button>
     </nav>
   </div>
 </template>
