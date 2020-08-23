@@ -14,3 +14,17 @@ $button-color-gradient:linear-gradient(
     rgba(63, 104, 217, 1) 60%,
     rgba(153, 68, 184, 1) 100%
 );
+
+
+// SCREEN
+// Small devices (landscape phones, 576px and up)
+$SMALL-DEV:576px;
+
+// Medium devices (tablets, 768px and up)
+$MEDIUM-DEV:768px;
+
+// Large devices (desktops, 992px and up)
+$LARGE-DEV:992px;
+
+// Extra large devices (large desktops, 1200px and up)
+$EXTRA-LARGE-DEV:1200px;

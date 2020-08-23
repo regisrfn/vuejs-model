@@ -16,6 +16,7 @@
     .logo {
         height: 4rem;
         width: 4rem;
+        flex-shrink: 0;
         fill: $header-color-logo;
         margin: 0.5rem 0px;
         cursor: pointer;
