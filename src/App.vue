@@ -6,6 +6,8 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
+    <router-view />
+
   </div>
 </template>
 
@@ -31,6 +33,7 @@ export default {
 
 #nav {
   padding: 30px;
+  padding-top: 6rem;
 
   a {
     font-weight: bold;

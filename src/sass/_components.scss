@@ -1,11 +1,16 @@
 // HEADER
 .header {
+    @media only screen and (max-width: $MEDIUM-DEV) {
+        padding: 0rem 1rem;
+    }
     background-color: $color-top;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0.2rem 1rem 1rem 0px rgba(0, 0, 0, 0.1);
     padding: 0rem 5rem;
+    position: fixed;
+    width: 100vw;
 
     nav {
         display: flex;
@@ -71,6 +76,37 @@
         // &:active{
         //     transform: translateY(1px);
         // }
+    }
+
+    &__btn {
+        display: none;
+    }
+    .navbar-icon {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &__line{
+            display: flex;
+            background-color: $color-black;
+            height: 0.3rem;
+            width: 2.4rem;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: $color-black;
+            }
+            &::before{
+                transform: translateY(-0.5rem);
+            }
+            &::after{
+                transform: translateY(0.5rem);
+            }
+        }
     }
 }
 
