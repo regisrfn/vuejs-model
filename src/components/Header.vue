@@ -1,14 +1,8 @@
 <template>
   <div class="header" :class="{ scrollClass: isActive }">
     <VueLogo class="logo" alt="logo" />
-
-    <input type="checkbox" class="header__btn" id="navbar-btn" />
-    <label for="navbar-btn" class="navbar-icon">
-      <span class="navbar-icon__line"></span>
-    </label>
-
     <nav>
-      <ul class="header__links">
+      <ul class="header__links hidden-menu">
         <li>
           <a href="#">Home</a>
         </li>
@@ -18,11 +12,11 @@
         <li>
           <a href="#">About</a>
         </li>
-      </ul>
+        <button>Services</button>
+      </ul>      
     </nav>
-    <button>Services</button>
     <nav>
-      <ul class="header__links">
+      <ul class="header__links header__register">
         <li>
           <a href="#">Login</a>
         </li>
@@ -31,6 +25,11 @@
         </li>
       </ul>
     </nav>
+
+    <input type="checkbox" class="header__btn" id="navbar-btn" />
+    <label for="navbar-btn" class="navbar-icon">
+      <span class="navbar-icon__line"></span>
+    </label>
   </div>
 </template>
 
