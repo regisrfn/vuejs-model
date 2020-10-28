@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    <input type="checkbox" class="header__btn" id="navbar-btn">
+  <div class="header" :class="{scrollClass:isActive}">
+    <input type="checkbox" class="header__btn" id="navbar-btn" />
     <label for="navbar-btn" class="navbar-icon">
       <span class="navbar-icon__line"></span>
     </label>
@@ -18,7 +18,7 @@
           <a href="#">About</a>
         </li>
       </ul>
-    <button>Services</button>
+      <button>Services</button>
     </nav>
   </div>
 </template>
@@ -27,8 +27,29 @@
 import VueLogo from '@/img/logo.svg'
 
 export default {
+  data() {
+    return {
+      isActive:false
+    }
+  },
   components: {
     VueLogo
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll (event) {
+      const scrollY = window.scrollY
+      if(scrollY > 10) {
+        this.isActive = true
+      } else {
+         this.isActive = false
+      }
+    }
   }
 }
 </script>
