@@ -64,3 +64,32 @@
         background-color: $red-accent-3;
     }
 }
+
+@keyframes closeBtm {
+    100% {
+        transform: translateY(0.8rem) rotate(0deg);
+        background-color: $header-color-logo;
+    }
+    50% {
+        transform: translateY(0rem) rotate(0deg);
+        background-color: $header-color-logo;
+    }
+    0% {
+        transform: rotate(90deg);
+        background-color: $red-accent-3;
+    }
+}
+
+@keyframes closeMid {
+    100% {
+        background-color: $header-color-logo;
+    }
+    50% {
+        transform: rotate(0deg);
+        background-color: $header-color-logo;
+    }
+    0% {
+        transform: rotate(45deg);
+        background-color: $red-accent-3;
+    }
+}

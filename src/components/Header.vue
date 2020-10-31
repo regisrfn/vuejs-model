@@ -2,7 +2,7 @@
 <div class="header" :class="{ scrollClass: isActive }">
     <VueLogo class="logo" alt="logo" />
     <nav>
-        <ul class="header__links hidden-menu" :class="{checked:isChecked}">
+        <ul class="header__links hidden-menu" :class="{ checked: isChecked }">
             <li>
                 <router-link to="/">Home</router-link>
             </li>
@@ -27,21 +27,21 @@
     </nav>
 
     <input v-model="isChecked" type="checkbox" class="header__btn" id="navbar-btn" />
-    <label for="navbar-btn" class="navbar-icon">
+    <label for="navbar-btn" class="navbar-icon" :class="{ checked: isChecked }">
         <span class="navbar-icon__line"></span>
     </label>
 </div>
 </template>
 
 <script>
-import VueLogo from '@/img/logo.svg'
+import VueLogo from "@/img/logo.svg";
 
 export default {
     data() {
         return {
             isActive: false,
-            isChecked: false
-        }
+            isChecked: false,
+        };
     },
     components: {
         VueLogo,
@@ -60,7 +60,7 @@ export default {
             } else {
                 this.isActive = false;
             }
-        }
+        },
     },
 };
 </script>
