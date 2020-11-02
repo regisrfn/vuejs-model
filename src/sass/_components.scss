@@ -166,7 +166,7 @@
         }
     }
 
-    &__btn {
+    .navbar-btn {
         display: none;
     }
 
@@ -207,16 +207,30 @@
                 transform: translateY(0.8rem);
             }
         }
+
+        .classX {
+            // transform: translateY(-0.8rem) rotate(0deg);    
+            // transform: translateY(0rem) rotate(0deg);    
+            // transform: rotate(90deg);
+            background-color: $red-accent-3;
+            transform: rotate(45deg);
+            &::before {
+                background-color: $red-accent-3;
+                transform: rotate(90deg);
+            }
+            &::after {
+                background-color: $red-accent-3;
+                transform: rotate(90deg);
+            }
+        }
     }
 
-    .navbar-icon.checked {
+    .navbar-btn.userClicked:checked ~ .navbar-icon {
         border-radius: 25%;
         border-width: 0;
         animation: pulse 1s;
-
         .navbar-icon__line {
             animation: openMid 0.8s forwards;
-
             &::before {
                 animation: openTop 0.8s forwards;
             }
@@ -226,7 +240,7 @@
         }
     }
 
-    .navbar-icon {
+    .navbar-btn.userClicked:not(:checked) ~ .navbar-icon {
         .navbar-icon__line {
             animation: closeMid 0.8s forwards;
             &::before {
@@ -237,6 +251,8 @@
             }
         }
     }
+
+    
 }
 
 @keyframes animate-button {

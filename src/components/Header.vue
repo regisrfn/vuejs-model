@@ -26,9 +26,9 @@
         </ul>
     </nav>
 
-    <input v-model="isChecked" type="checkbox" class="header__btn" id="navbar-btn" />
-    <label for="navbar-btn" class="navbar-icon" :class="{ checked: isChecked }">
-        <span class="navbar-icon__line"></span>
+    <input v-model="isChecked" type="checkbox" class="navbar-btn" :class="{ userClicked: isClicked }" id="navbar-btn" />
+    <label for="navbar-btn" class="navbar-icon" @click="clicked()">
+        <span ref="line" class="navbar-icon__line" :class="{ classX: addClassX }"></span>
     </label>
 </div>
 </template>
@@ -41,6 +41,8 @@ export default {
         return {
             isActive: false,
             isChecked: false,
+            isClicked: false,
+            addClassX: false,
         };
     },
     components: {
@@ -59,6 +61,21 @@ export default {
                 this.isActive = true;
             } else {
                 this.isActive = false;
+            }
+        },
+        clicked() {
+            var vm = this;
+            const span = this.$refs.line;
+            this.isClicked = true;
+            this.addClassX = false;
+            console.log(span);
+            span.onwebkitanimationend = () => {
+                {
+                    vm.isClicked = false;
+                    if (this.isChecked) {
+                        this.addClassX = true;
+                    }
+                }
             }
         },
     },
