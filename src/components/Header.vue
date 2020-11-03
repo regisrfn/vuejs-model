@@ -26,7 +26,7 @@
         </ul>
     </nav>
 
-    <input v-model="isChecked" type="checkbox" class="navbar-btn" :class="{ userClicked: isClicked }" id="navbar-btn" />
+    <input v-model="isChecked" type="checkbox" class="navbar-btn" :class="{ userClicked: isClicked }" id="navbar-btn" @keyup.space="clicked" />
     <label for="navbar-btn" class="navbar-icon" @click="clicked()">
         <span ref="line" class="navbar-icon__line" :class="{ classX: addClassX }"></span>
     </label>
@@ -68,7 +68,7 @@ export default {
             const span = this.$refs.line;
             this.isClicked = true;
             this.addClassX = false;
-            console.log(span);
+
             span.onwebkitanimationend = () => {
                 {
                     vm.isClicked = false;
