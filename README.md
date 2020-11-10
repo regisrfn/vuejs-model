@@ -1,4 +1,5 @@
-# vue-app
+# responsive navabar - vue-app
+see it on heroku: https://rufinonavbar.herokuapp.com/
 
 ## Project setup
 ```
